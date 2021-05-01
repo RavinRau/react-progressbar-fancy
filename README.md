@@ -1,4 +1,4 @@
-# npm-react-typescript-template
+# React-Progressbar-Fancy
 
 A template for publishing a React + TypeScript package to npm
 
@@ -31,4 +31,3 @@ Then publish your package by running
 
 - `npm publish`
 
-### Happy Building ♡
