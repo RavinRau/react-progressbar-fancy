@@ -1,5 +1,5 @@
-import React from "react";
-import {ProgressBar} from "./ProgressBar";
+import * as React from "react";
+import ProgressBar from "./ProgressBar";
 
 export default {
     title: "ProgressBar"
