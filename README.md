@@ -1,6 +1,6 @@
 # React-Progressbar-Fancy
 
-A fancy progressbar component, with modern design style.
+A fancy progress bar component, with gradient styling and some amazing animation. You are able to add your own custom gradient colors
 
 ![fancy progressbar](fancy-progressbar.gif)
 
