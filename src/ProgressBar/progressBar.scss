@@ -98,15 +98,6 @@ $anim-speed: 5; // in seconds
     );
     z-index: 10;
 
-    &.progressFillCompare {
-      transition: all 1s ease-in-out;
-      background: #baf4c0;
-      position: absolute;
-      top: 2px;
-      z-index: 2;
-      transition-delay: 0s;
-    }
-
     &::before {
       content: "";
       position: absolute;

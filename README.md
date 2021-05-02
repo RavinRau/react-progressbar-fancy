@@ -1,33 +1,49 @@
 # React-Progressbar-Fancy
 
-A template for publishing a React + TypeScript package to npm
+A fancy progressbar component, with modern design style.
 
-## How to use
+![fancy progressbar](fancy-progressbar.gif)
 
-Fork this repo, clone it to your local computer, and edit the `package.json` along with every other required file to match your project.
-Write the code for your package in TypeScript and Sass, compile it, and publish it to [npm](https://npmjs.com).
 
-To compile your code once, run
+## Installation
 
-- `npm run build`.
+Install with npm:
+- `npm install react-progressbar-fancy`.
 
-To compile your code once and refresh on file change, run
 
-- `npm run start`.
+or yarn:
+- `yarn add react-progressbar-fancy`.
 
-To publish your package to npm, make sure you're logged in the correct account by running
 
-- `npm login`.
+## Usage
 
-Compile your package by running
+Import the component with just one line of code
 
-- `npm run build`
+```javascript
+import {ProgressBar} from "react-progressbar-fancy";
+```
 
-Update the package version accordingly by using
+Now you can use the component:
 
-- [`npm version [patch | minor | major]`](https://docs.npmjs.com/about-semantic-versioning)
+```javascript
+<ProgressBar score={25}/>
+```
 
-Then publish your package by running
 
-- `npm publish`
+## Props
 
+| Name                | Description                                                                                                                                                                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `score`             | Progression value of the progressbar. Required.                                                                                                                                                          |
+| `label`             | Label text of the progressbar. Default: `''`                                                                                                                                                                                       |
+| `progressWidth`     | The width of the progressbar. Default: `500`.                                                                                                                                                                                      |
+| `hideText`          | To show only progressbar and remove all text. Default: `false`.                                                                                                                                                                                    |
+| `darkTheme`         | Change the color of the text to black. Default: `false`.                                                                                                                                                                                     |
+| `progressColor`     | Some present gradient colors to choose from. `'red' , 'green' , 'blue' , 'purple'`. Default: `'red'`.                                                                                                                                        |
+| `primaryColor`      | To add custom color for the progressbar. Advice to use both primaryColor and secondaryColor. Default: `''`.                                                                                                                                                                                 |
+| `secondaryColor`    | To add custom color for the progressbar. Advice to use both primaryColor and secondaryColor. Default: `''`.                                                                                             |
+| `disableGlow`       | Remove glow effect of the progressbar. Default: `false`.                                                                                                                                                         |
+
+## Extras
+
+You can take some inspiration for your custom gradient colors from `https://uigradients.com/`

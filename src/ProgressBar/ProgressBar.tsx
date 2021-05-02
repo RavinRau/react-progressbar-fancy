@@ -10,7 +10,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
     false
   );
 
-  const { score, progressWidth = 500, compareScore, progressColor, darkTheme } = props;
+  const { score, progressWidth = 500, primaryColor, secondaryColor, progressColor = primaryColor || secondaryColor ? '' : 'red', label, hideText, darkTheme,  disableGlow } = props;
 
   useEffect(() => {
     setProgressAnimation(true);
@@ -32,28 +32,29 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
   const renderProgressFiller = (glow: boolean) => (
     <>
       <div
-        className={`progressFill ${renderColor(progressColor)} ${
+        className={`progressFill ${!(primaryColor || secondaryColor) && renderColor(progressColor)} ${
           glow && 'glowingEffect'
-        } ${compareScore && 'transitionDelay'}`}
+        }`}
         style={{
           width: progressAnimation ? `${score > 3 ? score : 3}%` : 3,
+          background: `linear-gradient( to right, ${primaryColor}, ${secondaryColor})`,
         }}
       />
       <div
-        className={`${renderColor(progressColor)}`}
+        className={`${!(primaryColor || secondaryColor) && renderColor(progressColor)}`}
       >
         <div className={`particlesContainer`} style={{
           left: progressAnimation ? `${score > 3 ? score : 3}%` : 3,
         }}>
           <div className={`particles`} />
-          <div className={`smallParticles smallParticles4`} />
-          <div className={`smallParticles smallParticles3`} />
-          <div className={`smallParticles smallParticles2`} />
-          <div className={`bigParticles`} />
-          <div className={`smallParticles`} />
-          <div className={`particles particles2`} />
-          <div className={`smallParticles smallParticles5`} />
-          <div className={`smallParticles smallParticles6`} />
+          <div className={`smallParticles smallParticles4`} style={{background: secondaryColor}} />
+          <div className={`smallParticles smallParticles3`} style={{background: secondaryColor}} />
+          <div className={`smallParticles smallParticles2`} style={{background: secondaryColor}} />
+          <div className={`bigParticles`} style={{background: secondaryColor}} />
+          <div className={`smallParticles`} style={{background: secondaryColor}} />
+          <div className={`particles particles2`} style={{background: secondaryColor}} />
+          <div className={`smallParticles smallParticles5`} style={{background: secondaryColor}} />
+          <div className={`smallParticles smallParticles6`} style={{background: secondaryColor}} />
         </div>
       </div>
     </>
@@ -61,10 +62,10 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
 
   return (
     <div className={`progressBarContainer`}>
-      <div className={`labelScoreContainer ${darkTheme && `labelDarkTheme`}`}>
-        <div className={`label`}>label</div>
+      {!hideText && <div className={`labelScoreContainer ${darkTheme && `labelDarkTheme`}`}>
+        <div className={`label`}>{label}</div>
         <div className={`number`}>{score}%</div>
-      </div>
+      </div>}
       <div className={`barGaugeContainer`} style={{ flexWrap: "wrap" }}>
         <div
           style={{
@@ -75,7 +76,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
           <div className={`progressBar`}>
             <div className={`progressTrack`} />
             {renderProgressFiller(false)}
-            {renderProgressFiller(true)}
+            {!disableGlow && renderProgressFiller(true)}
           </div>
         </div>
       </div>

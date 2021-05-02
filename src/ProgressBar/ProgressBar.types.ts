@@ -1,10 +1,11 @@
 export interface IProgressBarProps {
-    score?: number;
-    useScoreColor?: boolean;
-    showScore?: boolean;
+    score: number;
+    label?: string;
     progressWidth?: number;
-    showCaret?: boolean;
+    hideText?: boolean;
     darkTheme?: boolean;
-    compareScore?: number;
     progressColor?: "red" | "green" | "blue" | "purple";
+    primaryColor?: string;
+    secondaryColor?: string;
+    disableGlow?: boolean
 }
