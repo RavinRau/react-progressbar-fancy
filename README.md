@@ -8,11 +8,11 @@ A fancy progress bar component, with gradient styling and some amazing animation
 ## Installation
 
 Install with npm:
-- `npm install react-progressbar-fancy`.
+- `npm install react-progressbar-fancy`
 
 
 or yarn:
-- `yarn add react-progressbar-fancy`.
+- `yarn add react-progressbar-fancy`
 
 
 ## Usage
