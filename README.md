@@ -2,7 +2,7 @@
 
 A fancy progress bar component, with gradient styling and some amazing animation. You are able to add your own custom gradient colors
 
-![fancy progressbar](fancy-progressbar.gif)
+<img src="https://i.ibb.co/1R4QMjX/fancy-progressbar.gif" alt="fancy-progressbar">
 
 
 ## Installation
