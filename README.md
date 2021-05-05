@@ -4,6 +4,8 @@ A fancy progress bar component, with gradient styling and some amazing animation
 
 <img src="https://i.ibb.co/1R4QMjX/fancy-progressbar.gif" alt="fancy-progressbar">
 
+## Testing
+You can check out and play around with the component in codepen <a>https://codesandbox.io/s/summer-flower-i8wni?file=/src/App.js</a>
 
 ## Installation
 
@@ -46,4 +48,4 @@ Now you can use the component:
 
 ## Extras
 
-You can take some inspiration for your custom gradient colors from `https://uigradients.com/`
+You can take some inspiration for your custom gradient colors from https://uigradients.com/
