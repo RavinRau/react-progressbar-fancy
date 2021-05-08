@@ -1,7 +1,5 @@
 # React-Progressbar-Fancy
 
-A fancy progress bar component, with gradient styling and some amazing animation. You are able to add your own custom gradient colors
-
   <p align="center">
   <a href="https://github.com/Juniourrau/react-progressbar-fancy/releases" alt="Downloads"><img src="https://img.shields.io/npm/dt/react-progressbar-fancy" /></a>
   <a href="https://github.com/Juniourrau/react-progressbar-fancy/stargazers" alt="Stars"><img src="https://img.shields.io/github/stars/Juniourrau/react-progressbar-fancy" /></a>
@@ -10,7 +8,10 @@ A fancy progress bar component, with gradient styling and some amazing animation
   <a href="https://github.com/Juniourrau/react-progressbar-fancy/blob/master/LICENSE" alt="License"><img src="https://img.shields.io/npm/l/react-progressbar-fancy" /></a>
 </p>
 
-<br>
+A fancy progress bar component, with gradient styling and some amazing animation. You are able to add your own custom gradient colors
+
+
+
 
 <img src="https://i.ibb.co/1R4QMjX/fancy-progressbar.gif" alt="fancy-progressbar">
 
