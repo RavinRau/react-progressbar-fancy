@@ -10,29 +10,16 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
     false
   );
 
-  const { score, progressWidth = 500, primaryColor, secondaryColor, progressColor = primaryColor || secondaryColor ? '' : 'red', label, hideText, darkTheme,  disableGlow } = props;
+  const { score, progressWidth, className, primaryColor, secondaryColor, progressColor = primaryColor || secondaryColor ? '' : 'red', label, hideText, darkTheme,  disableGlow } = props;
 
   useEffect(() => {
     setProgressAnimation(true);
   });
 
-  const renderColor = (color) => {
-    switch (color) {
-      case "red":
-        return 'red';
-      case "green":
-        return 'green';
-      case "blue":
-        return 'blue';
-      case "purple":
-        return 'purple';
-    }
-  };
-
   const renderProgressFiller = (glow: boolean) => (
     <>
       <div
-        className={`progressFill ${!(primaryColor || secondaryColor) && renderColor(progressColor)} ${
+        className={`progressFill ${!(primaryColor || secondaryColor) && progressColor} ${
           glow && 'glowingEffect'
         }`}
         style={{
@@ -41,7 +28,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
         }}
       />
       <div
-        className={`${!(primaryColor || secondaryColor) && renderColor(progressColor)}`}
+        className={`${!(primaryColor || secondaryColor) && progressColor}`}
       >
         <div className={`particlesContainer`} style={{
           left: progressAnimation ? `${score > 3 ? score : 3}%` : 3,
@@ -61,13 +48,14 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
   );
 
   return (
-    <div className={`progressBarContainer`}>
+    <div className={`progressBarFancyContainer ${className}`} style={{width: progressWidth}}>
       {!hideText && <div className={`labelScoreContainer ${darkTheme && `labelDarkTheme`}`}>
         <div className={`label`}>{label}</div>
         <div className={`number`}>{score}%</div>
       </div>}
       <div className={`barGaugeContainer`} style={{ flexWrap: "wrap" }}>
         <div
+            className={`progressbarWidth`}
           style={{
             width: progressWidth,
             margin: "0px 10px",

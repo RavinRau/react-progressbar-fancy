@@ -22,8 +22,8 @@ $anim-speed: 5; // in seconds
   --secondary-color: #ec38bc;
 }
 
-.progressBarContainer {
-  width: fit-content;
+.progressBarFancyContainer {
+  width: 100%;
 
   .labelScoreContainer {
     display: flex;
@@ -82,6 +82,10 @@ $anim-speed: 5; // in seconds
   .barGaugeContainer {
     display: flex;
     align-items: center;
+
+    .progressbarWidth{
+      width: 100%;
+    }
   }
 
   .progressFill {
